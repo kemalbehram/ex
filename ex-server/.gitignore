@@ -1,0 +1,19 @@
+/.htaccess
+
+.user.ini
+.svn/*
+
+backend/runtime/*
+!backend/runtime/README
+404.html
+web/app/*
+
+web/static/*
+!web/static/echarts
+
+# 忽略2020-07-06之后上传的文件
+web/attachment/images/*
+
+.idea/
+
+/nbproject/

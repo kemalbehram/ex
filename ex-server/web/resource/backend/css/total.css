@@ -1,0 +1,124 @@
+
+
+.ex-card-head {
+    width: 534px;
+    height: 43px;
+    border-bottom: 1px solid #e9eaec;
+    padding: 14px 16px;
+    line-height: 1;
+    background: #5b7287;
+    color: #ffffff;
+}
+.ex-member .ex-card-body {
+    width: 534px;
+    padding: 40px 16px;
+}
+
+.ex-col-span-8 {
+    display: block;
+    width: 33.33333333%;
+    float: left;
+}
+.ex-col {
+    text-align: center;
+}
+
+.cardBody .ex-row {
+    width: 499px;
+    height: 40px;
+}
+.cardBody .ex-row .ex-col {
+    width: 166px;
+    height: 40px;
+    line-height: 40px;
+}
+.ex-transaction{
+    width: 1092px;
+    height: 490px;
+    float: left;
+
+}
+.ex-member{
+    width: 530px;
+    height: 496px;
+    border-color: #e9eaec;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    float: left;
+}
+.ex-transaction .boardCol{
+    width: 1098px;
+    height: 238px;
+    border-color: #e9eaec;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    transition: all .2s ease-in-out;
+    margin-left: 32px;
+}
+.ex-transaction .boardCol .ex-card-head{
+    width: 1092px;
+    border-bottom: 1px solid #e9eaec;
+    padding: 14px 16px;
+    line-height: 1;
+}
+.ex-transaction .boardCol .cardTitle{
+    position: relative;
+    text-align: left;
+}
+.ex-transaction .boardCol .selectWrapper select{
+    font-size: 14px;
+    width: 98px;
+    color: #5b7287;
+    margin-top: -3px;
+}
+.ex-transaction .boardCol .selectWrapper {
+    float: right;
+}
+.ex-transaction .boardCol .cardTitle span{
+    font-size: 16px;
+}
+.ex-transaction .ex-card-body {
+    padding: 21px 30px;
+}
+.ex-transaction .ex-card-body .ex-col p{
+    font-size: 30px;
+}
+.ex-transaction .ex-card-body .tradeTotalNum{
+    color: #ed3f14;
+}
+.ex-transaction .ex-card-body .tradeTotalMoney{
+    color: #19be6b;
+}
+.ex-transaction .ex-card-body .fee{
+    color: #2d8cf0;;
+}
+.ex-transaction .ex-card-body .ex-row{
+    width: 1040px;
+    height: 120px;
+    border-bottom: 1px solid #e9eaec;
+    padding: 30px 0;
+}
+.ex-transaction .ex-card-body .cardFooter{
+    width: 1040px;
+}
+.ex-transaction .ex-card-body .cardFooter .ex-col-offset-1{
+    width: 520px;
+    height: 40px;
+    text-align: center;
+    margin: 12px 0 0 0 ;
+    float: left;
+}
+.ex-transaction .ex-card-body .ex-col{
+    width: 346px;
+    height: 70px;
+    float: left;
+}
+.ex-transaction .ex-card-body .cardFooter .ex-col-offset-1 p{
+    width: 520px;
+    height: 30px;
+}

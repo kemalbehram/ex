@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title></title>
+
+		<!-- Fix for iOS Safari zooming bug -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+		<script type="text/javascript" src="charting_library/charting_library.min.js"></script>
+		<script type="text/javascript" src="datafeeds/udf/dist/polyfills.js"></script>
+		<script type="text/javascript" src="datafeeds/udf/dist/bundle.js"></script>
+
+		<script type="text/javascript">
+			function getParameterByName(name) {
+				name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+				var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+					results = regex.exec(location.search);
+				return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			var stock = getParameterByName("stock");
+        	var money = getParameterByName("money");
+			TradingView.onready(function()
+			{
+				var widget = new TradingView.widget({
+					fullscreen: true,
+					symbol: stock+"/"+money,
+					interval: '5',
+					timezone:getParameterByName("timezone")|| "Asia/Hong_Kong",
+					container_id: "tv_chart_container",
+					//	BEWARE: no trailing slash is expected in feed URL
+					datafeed: new Datafeeds.UDFCompatibleDatafeed(document.location.protocol+"//"+document.location.host),
+					library_path: "charting_library/",
+					locale: "zh",
+					overrides: {
+	                    "paneProperties.topMargin": 15,
+	                    "symbolWatermarkProperties.color" : "rgba(0, 0, 0, 0.00)",
+	                    "volumePaneSize": "medium",
+	                    "paneProperties.legendProperties.showLegend": false
+	                },
+	                drawings_access: {
+				        
+				    },
+				    // 禁用所有属性页  property_pages
+	                disabled_features: [
+	                	"property_pages",
+	                	'border_around_the_chart',
+	                	'right_bar_stays_on_scroll',
+	                	'show_interval_dialog_on_key_press',
+						'source_selection_markers', // 禁用系列和指示器的选择标记
+						"header_indicators", //图标指标
+
+	                	"left_toolbar",
+
+                	],
+					enabled_features: [
+						"support_multicharts"
+
+					],
+					overrides: {
+	                    "mainSeriesProperties.style": 1,
+	                    "volumePaneSize": "medium",
+	                    "symbolWatermarkProperties.color": "rgba(0, 0, 0, 0)",
+						"paneProperties.background": "#222222",
+						"paneProperties.vertGridProperties.color": "#363c4e",
+						"paneProperties.horzGridProperties.color": "#363c4e",
+						"symbolWatermarkProperties.transparency": 90,
+						"scalesProperties.textColor" : "#AAA",
+	                    "paneProperties.gridProperties.color": "#363c4e",
+	                    "paneProperties.topMargin": 15,
+	                    'paneProperties.legendProperties.showLegend': false,
+					    'paneProperties.legendProperties.showStudyArguments': false,
+						'paneProperties.legendProperties.showStudyTitles': false,
+						'paneProperties.legendProperties.showStudyValues': false,
+						'scalesProperties.showSeriesLastValue': true,
+						'scalesProperties.showSeriesPrevCloseValue': false,
+						'scalesProperties.showStudyLastValue': false,
+						'scalesProperties.showStudyPlotLabels': false,
+						'scalesProperties.showSymbolLabels': true,
+	                    
+	                },
+	                studies_overrides: {
+					    'ma cross.crosses:plot.plottype':"line",
+					    'ma cross.crosses:plot.linewidth':"1",
+                        // 'MA Cross.short:plot.color': "#6B3798", // 替换红线
+                        // 'MA Cross.long:plot.color': "#f4d584",  // 替换绿线
+					},
+	                autosize:true,
+					
+					theme: getParameterByName('theme'),
+				});
+				widget.onChartReady(function() {
+				    widget.chart().createStudy('MA Cross', false, false, [10], null, {'Crosses:Plot.plottype': 'line'});
+				});
+				// widget.onChartReady(function() {
+				//     widget.chart().createStudy('MA Cross', false, false, [10], null, {'Crosses:Plot.plottype': 'line'});
+				// 	var reslution =  ["1分", "5分", "15分", "30分", "1小时", "日线", "周线", "1月"];
+				// 	var reslution1 =  ["1", "5", "15", "30", "60", "1D", "1W", "1M"];
+				// 	for(var i = 0; i < reslution.length; i++) {
+				// 		var button = widget.createButton()[0];
+				// 		button.innerHTML=reslution[i];
+				// 		(function(){      
+				// 		    var p = i     
+				// 		    button.onclick = function() {      
+				// 		      widget.activeChart().setResolution(reslution1[p]);
+				// 		    }  
+				// 		  })();
+				// 	};
+				   
+				// });
+				
+
+				
+			})
+
+		</script>
+
+		<style>
+			html.theme-dark .customButton--jqJTfH5- {
+			    color: #758696;
+			    display: none;
+			}
+		</style>
+	</head>
+
+	<body style="margin: 0px;">
+		<div id="tv_chart_container">
+		</div>
+	</body>
+
+</html>

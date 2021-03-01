@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的推荐</title>
+    <style>
+        html{font-size: 100px;}
+        *{margin:0;padding:0;font-family: pingFang-SC-Regular;list-style: none;}
+        #box{
+            width:100%;
+            height:100%;
+            background:#f8f9fa;
+            overflow: hidden;
+        }
+        .content{width:100%;height:100%;overflow-y: scroll;}
+        .space{width:100%;height:0.3rem;background:#eeeeee;}
+        .content ul{width:100%;position: relative;}
+        ul li{width:100%;height: 1.12rem;border-bottom: 1px solid #eeeeee;position: relative;}
+        ul li img{width:0.8rem;height:0.8rem;position:absolute;top:0.16rem;left:0.3rem;}
+        ul li span{font-size: 0.32rem;margin-left:1.34rem;line-height: 1.12rem;display: block;color:#212121;}
+        ul li p{position: absolute;height: 100%;right: 0.3rem;top: 0;font-size: 0.28rem;color: #757575;line-height: 1.12rem;}
+    </style>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth >= 750) {
+                    docEl.style.fontSize = '100px';
+                } else {
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+
+                h = document.documentElement.clientHeight+'px';
+                var oBox = document.getElementById('box');
+                oBox.style.height = h;
+
+                function GetRequest() { 
+                    var url = location.search; //获取url中"?"符后的字串 
+                    console.log(url)
+                    var theRequest = new Object(); 
+                    if (url.indexOf("?") != -1) {
+                        var str = url.substr(1); 
+                        strs = str.split("&"); 
+                        console.log(strs)
+                        for(var i = 0; i < strs.length; i ++) {
+                            theRequest[strs[i].split("=")[0].split("%")[0]]=unescape(strs[i].split("=")[1]); 
+                        } 
+                    } 
+                    return theRequest; 
+                } 
+                var req = GetRequest(); 
+                var os = req['os'];
+                var language = req['language'];
+                var access_token = req['access_token'];
+                var listContent = doc.querySelector('.list_content');
+    
+                var xhr = new XMLHttpRequest();
+                xhr.open('post', 'http://ex.kinlink.cn/api/register/recommend-member' );
+                xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xhr.send('access_token='+access_token+'&os='+os+'');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var result = xhr.responseText;
+                        var jsonObject=eval("("+result+")");
+                        var data = jsonObject.data;
+                        console.log(data)
+                        if(jsonObject.code ==200){
+                            for(var i=0;i<data.length;i++){
+                                var oLi = document.createElement('li');
+                                oLi.innerHTML = '<img src="'+data[i].head_portrait+'" alt="" class="Qure">'+
+                                                '<span class="name">'+data[i].nickname+'</span>'+
+                                                '<p class="listOrder">'+data[i].id+'</p>'
+                                listContent.appendChild(oLi);
+                            }
+                        }
+                    } 
+                };
+            };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div class="content">
+            <div class="space"></div>
+            <ul class="list_content"></ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /assets/
+Disallow: /attachment/
+Disallow: /backend/
+Disallow: /resource/

@@ -1,0 +1,167 @@
+#night .headertop{
+    background: #1d2129;
+    color: #FFFFFF;
+}
+#night .loginArea a, .person a,
+#night .headerUser .person .navLift li a,
+#night .chose_c,
+#night .currencyList li a,
+#night .ybc_list .userinbtc .inBTtext,
+#night .ybc_list .ybc_list .ybcoin h2,
+#night .ybc_list .instructions p,
+#night .pagecnt,
+#night .ybc_make tbody tr td,
+#night .currentForm label,
+#night #tagContent .currentForm .coin_rmb p,
+#night .currentForm .surplus_amount,
+#night .cue,
+#night #oImg p,
+#night .raise_list td, .raise_list th, .raise_list tr,
+#night .sdmenu div p,
+#night .sdmenu div a,
+#night .userAssets>span,
+#night .headerUser .person .myuserView .myUser .userBottom ul li,
+#night .headerUser .person .myuserView .myUser .uidTOP .uid,
+#night .passContent .tagContent .ybc_con li label,
+#night .ybc_list .ul_select label,
+#night .safe_center dl span,
+#night .sc_statu dt,
+#night .sc_statu dd,
+#night .total-reward .rewards li,
+#night .rewards-detail li p,
+#night .referer-lead h3,
+#night .api_label,
+#night #coinOrder .orderCenter .my_record_new .myRecord .latestList thead tr th,
+#night #coinOrder .orderCenter .record_history_new .myRecordHistory .historyList thead tr th,
+#night #coinOrder .orderLift .latest_list_new .record_new .latest_list_new thead tr th,
+#night #coinOrder .orderRight .transact_new .coinlist_new thead th,
+#night #coinOrder .orderRight .sellform_new .sell_buy_view .formarea .buyform .inputting,
+#night #coinOrder .orderRight .sellform_new .sell_buy_view .formarea .buyform .inputting .numTiter,
+#night #coinOrder .orderRight .assets h2,
+#night #coinOrder .orderRight .assets .balance_view .balance_new thead tr th,
+#night #coinOrder .orderRight .assets .balance_view .balance_new tbody tr td,
+#night #coinOrder .orderRight .transact_new .coinlist_new tbody tr td:nth-child(3),
+#night #coinOrder .orderRight .transact_new .coinlist_new tbody tr td:nth-child(4),
+#night .curView_New .tradView tr td a,
+#night #coinOrder .orderLift .currency_list_new .tradeNav ul li,
+#night #coinOrder .orderLift .favorite .favorite_view li span,
+#night #coinOrder .orderLift .total_hover .massg p:nth-child(1) .new_price, 
+#night #coinOrder .orderLift .total_top_new .massg p:nth-child(1) .new_price,
+#night #coinOrder .orderLift .total_hover .massg p span, 
+#night #coinOrder .orderLift .total_top_new .massg p span,
+#night #coinOrder .orderLift .total_hover .massg p:nth-child(4) span:nth-child(2) em, 
+#night #coinOrder .orderLift .total_top_new .massg p:nth-child(4) span:nth-child(2) em,
+#night .shiftRmb1,
+#night .p1,
+#night .p2,
+#night .iconAl_,
+#night a,
+#night #coinOrder .orderCenter .record_history_new .myRecordHistory h2 a,
+#night #coinOrder .orderCenter .my_record_new .myRecord #mycointrustlist_new tr td, 
+#night #coinOrder .orderCenter .record_history_new .myRecordHistory #myHistoryList_new tr td,
+#night chose_c,
+#night .nav li a{
+    color: #ccc;
+}
+
+#night .headerUser .person .myuserView .myUser .out,
+#night .sdmenu div a:hover,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night aaaaa,
+#night .headerUser .person .myuserView .myUser .userBottom ul li:hover{
+    background: #2861f6;
+    border-color: #2861f6;
+}
+
+#night #coinOrder .orderRight .transact_new .coinlist_new tbody tr td .depth.sell{
+    background: #432f39;
+}
+#night #coinOrder .orderRight .transact_new .coinlist_new tbody tr td .depth.buy{
+    background: #253c42;
+}
+
+
+
+
+
+
+
+#night #coinOrder .orderLift .total_top_new,
+#night .PriceNew_active1
+#night #coinOrder .orderLift .newBoxB{
+    border: 1px solid #222a38;
+}
+#night .newFt,
+#night #coinOrder .orderLift .total_top_new,
+#night #coinOrder .orderLift .newBoxB,
+#night #coinOrder .orderLift .currency_list_new,
+#night #coinOrder .orderLift .latest_list_new,
+#night #coinOrder .orderLift .latest_list_new .record_new .coinorderlist::-webkit-scrollbar-track,
+#night #coinOrder .orderLift .list_con1,
+#night #coinOrder .orderLift .currency_list_new .tradeNav,
+#night #coinOrder .orderCenter .record_history_new,
+#night #coinOrder .orderCenter .my_record_new,
+#night #coinOrder .orderRight .transact_new,
+#night #coinOrder .orderRight .assets,
+#night #coinOrder .orderRight .sellform_new,
+#night .newBoxB,
+#night .curView_New .tradView tr td,
+#night #coinOrder .orderCenter .k_img,
+#night .price,
+#night .currency_list_c,
+#night .bg_w,
+#night .passContent,
+#night #verifyon,
+#night .ybc_list .ybcoin .newchange,
+#night .raise_list th,
+#night .sdmenu,
+#night .raise_list tr:nth-child(2n),
+#night .headerUser .person .myuserView .myUser,
+#night .navLift li .msgView,
+#night .headerUser .person .mywallet,
+#night .multlang_regcont ul,
+#night .sdmenu div,
+#night .link-target,
+#night .total-reward,
+#night .referer-lead,
+#night .PriceNew_active1,
+#night .currency_list_x .favorite .favorite_view,
+#night .curView .tradeNav,
+#night .curView .tradView .curList_new .List_mark_new tbody tr td,
+#night .tradeNav ul li,
+#night .currency_list_x .favorite .favorite_view li.active span,
+#night .fwBig,
+#night .rumenBig,
+#night #coinOrder .orderCenter .my_record_new .myRecord .mycointrustlist, 
+#night #coinOrder .orderCenter .record_history_new .myRecordHistory .myHistoryList,
+#night linktarget,
+#night #coinOrder .orderLift .favorite{
+    background: #222a38;
+    border-color: #222a38;
+    color: #fff;
+}
+#night,
+#night .section,
+#night .ybc_section,
+#night .flexslider,
+#night .user,
+#night .login_tongyi,
+#night .ybc_section,
+#night .ybc_section,
+#night .ybc_section,
+#night #coinOrder,
+#night #main{
+    background: #1d2129;
+    color: #fff;
+}
+#night #code_area_num {
+    background: #1d2129;
+    border: solid 1px #d2e6fc;
+    border-radius: 5px;
+}

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API测试页面</title>
+</head>
+<body>
+	<p>公共参数：os【系统型号：android/ios/web】</p>
+	<p>公共参数：os_ver【操作系统版本号】</p>
+	<p>公共参数：soft_ver【软件版本号】</p>
+	<p>公共参数：language【软件语言：zh_cn/en_us】</p>
+	<p>公共参数：access_token【】</p>
+	<p>公共参数：chain_network【testnet/main_network】</p>
+
+	<div style="background-color: #FFF3CD;">
+
+      	<p>0226-挖矿记录（PC，APP公用）</p>
+		<form action="/api/task/mining-list" method="post">
+			access_token(选填)：<input name="access_token" type="text" value="" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			请求开始数(limit_begin)：<input name="limit_begin" type="text" value="0"/>
+			请求结束数(limit_num)：<input name="limit_num" type="text" value="20"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+		<p>物联通宝-01</p>
+		<form action="/api/wltb/balance" method="post">
+			地址或手机号：<input name="keyword" type="text" value="" size="60"/>
+			货币标识（BTC等）: <input name="coin_symbol" type="text" value=""/>
+			change: <input name="change" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/><hr>
+
+		<p>Exchange-CC-20.获取OTC聊天初始化信息</p>
+		<form action="/api/chat/init" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-CC-21.获取OTC聊天历史</p>
+		<form action="/api/chat/history" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/>
+			订单ID：<input name="order_id" type="text" value="" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>Exchange-CC-01.获取系统交易区（PC，APP公用）（03-1交易所.jpg）</p>
+		<form action="/api/exchange/market" method="post">
+			access_token(选填)：<input name="access_token" type="text" value="" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/><hr>
+
+		<p>WZ-01.获取验证码</p>
+		<form action="/api/register/mobile-varcode" method="post">
+          	国际区号(mobile_prefix，格式:+86): <input name="mobile_prefix" type="text" value=""/>
+			手机号(mobile_phone): <input name="mobile_phone" type="text" value=""/>
+			类型(type,1是注册,2是忘记密码,3提币验证): <input name="type" type="text" value="1"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      <p>WZ-01.获取邮箱验证码</p>
+		<form action="/api/register/email-varcode" method="post">
+			邮箱(email): <input name="email" type="text" value=""/>
+			类型(type,1是注册,2是忘记密码): <input name="type" type="text" value="1"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>WZ-02.注册</p>
+		<form action="/api/register/register" method="post">
+          	国际区号(mobile_prefix，格式:+86): <input name="mobile_prefix" type="text" value=""/>
+			手机号(mobile_phone)：<input type="text" name="mobile_phone" value="">
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			登录密码(password): <input name="password" type="text" value=""/>
+			重复密码(repassword): <input name="repassword" type="text" value=""/>
+			邀请码(code)：<input type="text" name="code" value="">
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+      <p>WZ-02.02.邮箱注册</p>
+		<form action="/api/register/email-register" method="post">
+			邮箱(email): <input name="email" type="text" value=""/>
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			登录密码(password): <input name="password" type="text" value=""/>
+			重复密码(repassword): <input name="repassword" type="text" value=""/>
+			邀请码(code)：<input type="text" name="code" value="">
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+      
+		<p>WZ-03.登录</p>
+		<form action="/api/register/sign" method="post">
+           	国际区号(mobile_prefix，格式:+86): <input name="mobile_prefix" type="text" value=""/>
+			手机号(mobile_phone)：<input type="text" name="mobile_phone" value=""/>
+			密码(password): <input name="password" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      	<p>WZ-03.01邮箱登录</p>
+		<form action="/api/register/email-sign" method="post">
+          	邮箱(email): <input name="email" type="text" value=""/>
+			密码(password): <input name="password" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+		<p>WZ-06.02.忘记密码</p>
+		<form action="/api/register/forget-password" method="post">
+           	国际区号(mobile_prefix，格式:+86): <input name="mobile_prefix" type="text" value=""/>
+			手机号(mobile_phone)：<input type="text" name="mobile_phone" value="">
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			新密码(password): <input name="password" type="text" value=""/>
+			确认密码(repassword): <input name="repassword" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+      	<p>WZ-06.02.01 邮箱找回密码</p>
+		<form action="/api/register/email-forget-password" method="post">
+            邮箱地址(email)：<input type="text" name="email" value="">
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			新密码(password): <input name="password" type="text" value=""/>
+			确认密码(repassword): <input name="repassword" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      
+		<p>WZ-06.01.修改登录密码</p>
+		<form action="/api/user/password-edit" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			原登录密码(oldpassword): <input name="oldpassword" type="text" value=""/>
+			新登录密码(password): <input name="password" type="text" value=""/>
+			重复密码(repassword): <input name="repassword" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>WZ-07.01.我的推荐</p>
+		<form action="/api/register/recommend" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>WZ-07.02.我的推荐好友</p>
+		<form action="/api/register/recommend-member" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      <p>WZ-08.开启谷歌二次验证</p>
+		<form action="/api/register/open-google-check" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      <p>WZ-09.谷歌验证</p>
+		<form action="/api/register/check-google-code" method="post">
+            access_token：<input name="access_token" type="text" value="" size="60"/>
+          	谷歌验证码(var_code)：<input name="var_code" type="text" value="" size="10"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+       <p>WZ-10.关闭谷歌二次验证</p>
+		<form action="/api/register/close-google-check" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+          	谷歌验证码(var_code)：<input name="var_code" type="text" value="" size="10"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+      <hr>
+
+		<p>APP-CC-05.获取用户信息</p>
+		<form action="/api/member/info" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-CC-05.获取资产余额(未登录用于查询币种)【获取所有：asset_type为空;获取一种：ETH;两种：BTC|ETH;多种;中间以|隔开】</p>
+		<form action="https://www.smartjys.com/api/exchange/balance" method="post">
+			access_token(选填)：<input name="access_token" type="text" value="" size="60"/>
+			资产类型(asset_type)：<input type="text" placeholder="BTC|ETH" name="asset_type">
+			chain_network: <input name="chain_network" type="text" value="main_network"/>
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+        <p>Exchange-CC-06.交易所限价单买卖</p>
+        <form action="/api/exchange/order-limit" method="post">
+            access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/>
+            交易区(BTCUSDT/ETHUSDT/ETHBTC)：<input type="text" value="" name="market">
+            类型（1卖出，2买入）：<input type="text" value="" name="side">
+            数量：<input type="text" value="" name="amount">
+            价格：<input type="text" value="" name="pride">
+            <input type="submit" value="提交"/>
+        </form><br/>
+        <p>Exchange-LH-07.撤销委托单</p>
+		<form action="/api/exchange/cancel-order" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/>
+			交易区(BTCUSDT/ETHUSDT/ETHBTC)：<input type="text" name="market">
+			订单ID(order_id)：<input type="text" name="order_id">
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>Exchange-LH-11.提现前准备</p>
+		<form action="/api/bank/withdraw-prepare" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			货币标识: <input name="coin_symbol" type="text" value=""/>
+			公共参数：os<input name="os" type="text" value="android"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-12.用户提现申请【原接口名称：转出操作（从银行转出到个人账户）】</p>
+		<form action="/api/bank/turn-out" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			货币标识（BTC等）: <input name="coin_symbol" type="text" value=""/>
+			用户钱包地址：<input type="text" name="wallet_addr">
+			转出金额（十进制）: <input name="value" type="text" value=""/>
+			矿工费： <input name="current" type="text" value=""/>
+			备注： <input name="description" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-13.银行交易记录明细</p>
+		<form action="/api/bank/recharge-details" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			获取第N页(从1开始)：<input type="text" name="page">
+			每页数据量：<input type="text" name="page_size">
+			币种类型(可为空)：<input type="text" name="coin_symbol">
+			交易类型(可为空)：<select name="transaction_type">
+				<option value=""></option>
+				<option value="1">充值【该类型为1】</option>
+				<option value="10">转出【该类型为10】</option>
+				<option value="20">交易所【该类型为20】</option>
+			</select>
+			开始时间(可为空)：<input type="text" name="begin_time">
+			结束时间(可为空)：<input type="text" name="end_time">
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-14.用户申请提现记录【状态1：待审核、2：审核通过、3：未通过、4：提现失败】</p>
+		<form action="/api/bank/apply-log" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			获取数据页码：<input type="number" name="page">
+			每页数据量：<input type="number" name="page_size">
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-15.撤销提现申请</p>
+		<form action="/api/bank/revoke-apply" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			撤销申请记录单的id：<input type="number" name="apply_id">
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>Exchange-LH-16.生成货币地址</p>
+		<form action="/api/exchange/generate-address" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			币种类型：<input type="text" name="coin_symbol">
+			chain_network：<input type="text" name="chain_network">
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>Exchange-LH-17.新增提币地址</p>
+		<form action="/api/withdraw/add-address" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			地址名称：<input type="text" name="title">
+			地址：<input type="text" name="addr">
+			币种类型：<input type="text" name="coin_symbol">
+			币种描述：<input type="text" name="description">
+			设备类型(公共参数)：<input type="text" name="os" value="android">
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-18.获取用户提币地址列表</p>
+		<form action="/api/withdraw/get-address" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			设备类型(公共参数)：<input type="text" name="os" value="android">
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-19.编辑用户提币地址</p>
+		<form action="/api/withdraw/edit-address" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			编辑条目ID：<input type="number" name="addr_id">
+			地址名称：<input type="text" name="title">
+			地址：<input type="text" name="addr">
+			币种类型：<input type="text" name="coin_symbol">
+			币种描述：<input type="text" name="description">
+			设备类型(公共参数)：<input type="text" name="os" value="android">
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>Exchange-LH-20.删除提币地址</p>
+		<form action="/api/withdraw/del-address" method="post">
+			access_token：<input name="access_token" type="text" value="UH47JK_Uwk7bYd7LsC0NYwcqoiwAYOLS_1534762451" size="60"/>
+			地址ID：<input type="number" name="addr_id">
+			设备类型(公共参数)：<input type="text" name="os" value="android">
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>WZ-11.首页轮播图</p>
+		<form action="/api/start/start-page" method="post">
+			（type=1:轮播图，2:logo）：<input type="text" value="" name="type">
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>WZ-15.01添加自选</p>
+		<form action="/api/trade/trade-add" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			货币名(stock)：<input type="text" name="stock">
+			货币属性(money)：<input type="text" name="money">
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>WZ-15.02查询自选</p>
+		<form action="/api/trade/trade-find" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>WZ-15.03删除自选</p>
+		<form action="/api/trade/trade-delete" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			货币名(stock)：<input type="text" name="stock">
+			货币属性(money)：<input type="text" name="money">
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>PC-WZ-23.商家认证</p>
+		<form action="/api/merchants/merchants" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			照片: <input name="image" type="text" value=""/>
+			描述: <input name="describe" type="text" value=""/>
+			视频: <input name="video" type="text" value=""/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>PC-WZ-24.上传图片</p>
+		<form action="/api/merchants/image" method="post" enctype="multipart/form-data">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			商家认证图片: <input name="image" type="file"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>PC-WZ-25.上传视频</p>
+		<form action="/api/merchants/video" method="post" enctype="multipart/form-data">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			商家认证视频: <input name="video" type="file"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>PC-WZ-26.获取商家认证信息</p>
+		<form action="/api/merchants/info" method="post">
+			access_token：<input name="access_token" type="text" value="lrQrcoXmnzhBqZKSyeki0TRrgmLxozon_1542092427" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+		<p>PC-WZ-26.重新申请商家认证</p>
+		<form action="/api/merchants/eliminate" method="post">
+			access_token：<input name="access_token" type="text" value="lrQrcoXmnzhBqZKSyeki0TRrgmLxozon_1542092427" size="60"/>
+			os(ios/android/web): <input name="os" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><hr>
+
+		<p>Exchange-LH-12.02用户提现申请(银行卡)</p>
+		<form action="/api/bankout/turn-card" method="post">
+			access_token：<input name="access_token" type="text" value="cbZjX2-zVPD25EbXJJ59jEWZiT-PuetQ_1539056403" size="60"/>
+			货币标识（BTC等）: <input name="coin_symbol" type="text" value=""/>
+			卡号：<input type="text" name="wallet_card">
+			名称：<input type="text" name="wallet_name">
+			手机号: <input type="text" name="phone">
+			转出金额（十进制）: <input name="value" type="text" value=""/>
+			备注： <input name="description" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+	</div>
+
+	<div style="background-color: gray">
+	<p>C-2.提交反馈</p>
+	<form action="/api/feedback/add" method="post" enctype="multipart/form-data">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		内容: <input name="content" type="text" value="" size="50"/>
+		图片（选填）: <input name="thumb" type="file"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+
+    <p>C-3.个人中心资料修改</p>
+    <form action="/api/member/info-update" method="post" enctype="multipart/form-data">
+        access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+        用户昵称: <input name="nickname" type="text" value=""/>
+        头像: <input name="head_portrait" type="file"/>
+        <input type="submit" value="提交"/>
+    </form><br/><br/>
+
+	<p>C-5.实名认证</p>
+	<form action="/api/certification/set-real" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		姓名: <input name="real_name" type="text" value=""/>
+		身份证号: <input name="id_number" type="text" value=""/>
+		正: <input name="id_card_img" type="text" value=""/>
+		反: <input name="id_card_img2" type="text" value=""/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-5-1.上传图片</p>
+	<form action="/api/certification/upload-image" method="post" enctype="multipart/form-data">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		身份证图片: <input name="image" type="file"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-5-2.获取实名认证信息</p>
+	<form action="/api/certification/get-info" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-5-2.重新申请</p>
+	<form action="/api/certification/eliminate" method="post">
+		access_token：<input name="access_token" type="text" value="lrQrcoXmnzhBqZKSyeki0TRrgmLxozon_1542092427" size="60"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+
+	<p>1.获取消息列表</p>
+	<form action="/api/member/message-list" method="post">
+		type(0.公告 1.个人消息)：<input name="type" type="text" value="0"/>
+		access_token：<input name="access_token" type="text" value="" size="60"/>
+		os(ios/android/web): <input name="os" type="text" value=""/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-1.获取收款类型</p>
+	<form action="/api/gathering/get-method" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-2.获取收款信息列表</p>
+	<form action="/api/gathering/get-list" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-3.添加收款信息</p>
+	<form action="/api/gathering/add-proceed" method="post"  enctype="multipart/form-data">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/><br/>
+		收款类型(proceeds_type)：<input name="proceeds_type" type="text" value="alipay"/><br/>
+		支付宝微信银行卡账号（account）：<input name="account" type="text" value="15732632019"/><br/>
+		持卡人姓名（银行卡）(选填)(username)：<input name="username" type="text" value=""/><br/>
+		开户行（银行卡）(选填)(bank_name)：<input name="bank_name" type="text" value=""/><br/>
+		收款码（支付宝微信）(选填)（qrcode）：<input name="qrcode" type="file"/><br/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-4.修改收款信息</p>
+	<form action="/api/gathering/up-proceed" method="post" enctype="multipart/form-data">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/><br/>
+		主键id(id)：<input name="id" type="text" value=""/><br/>
+		收款类型(proceeds_type)：<input name="proceeds_type" type="text" value="alipay"/><br/>
+		支付宝微信银行卡账号（account）：<input name="account" type="text" value="15732632019"/><br/>
+		持卡人姓名（银行卡）(选填)(username)：<input name="username" type="text" value=""/><br/>
+		开户行（银行卡）(选填)(bank_name)：<input name="bank_name" type="text" value=""/><br/>
+		收款码（支付宝微信）(选填)（qrcode）：<input name="qrcode" type="file"/><br/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-5.删除收款信息</p>
+	<form action="/api/gathering/del-proceed" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		主键id(id)：<input name="id" type="text" value=""/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-6.获取开户行列表</p>
+	<form action="/api/gathering/get-bank" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	<p>C-6-7.获取单个收款信息详情</p>
+	<form action="/api/gathering/get-one" method="post">
+		access_token：<input name="access_token" type="text" value="4dTl2756Gaq-EzW0dFXXWRRZJ7muxocA_1517070195" size="60"/>
+		id：<input name="id" type="text" value="1"/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+	
+	<p>C-9.各种单页</p>
+	用户协议：	https://wallet.kinlink.cn/article/index?id=1<br/>
+	服务及隐私：	https://wallet.kinlink.cn/article/index?id=2<br/>
+	公司简介：	https://wallet.kinlink.cn/article/index?id=3<br/>
+	客服热线：	https://wallet.kinlink.cn/article/index?id=4<br/>
+	怎么保存助记词：	https://wallet.kinlink.cn/article/index?id=5<br/>
+	支付密码怎么修改：	https://wallet.kinlink.cn/article/index?id=6<br/>
+	常见问题：	https://wallet.kinlink.cn/article/index?id=7<br/>
+	什么是keystore：	https://wallet.kinlink.cn/article/index?id=8<br/>
+	什么是私钥：	https://wallet.kinlink.cn/article/index?id=9<br/>
+	矿工费：		https://wallet.kinlink.cn/article/index?id=10<br/>
+	没有收到验证码：	https://wallet.kinlink.cn/article/index?id=11
+	<br/><br/>
+
+	<p>C-12-1.查询版本号是否需要更新</p>
+	<form action="/api/currency/get-version" method="post">
+		设备类型: <input name="os" type="text" value=""/>
+		版本号: <input name="soft_ver" type="text" value=""/>
+		<input type="submit" value="提交"/>
+	</form><br/><br/>
+
+	</div>
+
+
+	<div style="background-color: #999eff; color: white">
+		<h4>PC端</h4>
+		<p>PC-WZ-04.基本信息</p>
+		<form action="https://w.bibei-coin.com/api/user/user-info" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-05.01.用户实名认证</p>
+		<form action="/api/user/set-real" method="post">
+		access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+		姓名: <input name="real_name" type="text" value=""/>
+		身份证号: <input name="id_number" type="text" value=""/>
+		正: <input name="id_card_img" type="text" value=""/>
+		反: <input name="id_card_img2" type="text" value=""/>
+		<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-05.02.上传图片</p>
+		<form action="/api/user/upload-image" method="post" enctype="multipart/form-data">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			身份证图片: <input name="image" type="file"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-05.03.获取实名认证信息</p>
+		<form action="/api/user/get-info" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<!-- <p>PC-WZ-05.01.邮箱验证码</p>
+		<form action="/api/user/email-code" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			邮箱(email): <input name="email" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-05.02.绑定邮箱</p>
+		<form action="/api/user/email" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			邮箱(email): <input name="email" type="text" value=""/>
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			登录密码(password): <input name="password" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/> -->
+
+		<p>PC-WZ-06.03.忘记密码之手机验证</p>
+		<form action="/api/register/forget-password-phone" method="post">
+           	国际区号(mobile_prefix，格式:+86): <input name="mobile_prefix" type="text" value=""/>
+			手机号(mobile_phone)：<input type="text" name="mobile_phone" value="">
+			验证码(varcode): <input name="varcode" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-07.修改昵称</p>
+		<form action="/api/user/nickname-edit" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			修改昵称(nickname): <input name="nickname" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-08.02.获取资产余额（场景：04-1KK银行.jpg、买入、卖出效果图上部可用余额）【获取所有：asset_type为空;获取一种：ETH;两种：BTC|ETH;多种;中间以|隔开】</p>
+		<form action="/api/bargain/balance" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			资产类型(asset_type)：<input type="text" placeholder="BTC|ETH" name="asset_type">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-08.03.交易所限价单买卖</p>
+        <form action="/api/bargain/order-limit" method="post">
+            access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+            交易区(BTCUSDT/ETHUSDT/ETHBTC)：<input type="text" value="" name="market">
+            类型（1卖出，2买入）：<input type="text" value="" name="side">
+            数量：<input type="text" value="" name="amount">
+            价格：<input type="text" value="" name="pride">
+            <input type="submit" value="提交"/>
+        </form><br/><br/>
+
+        <p>PC-WZ-08.04.撤销委托单</p>
+		<form action="/api/bargain/cancel-order" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			交易区(BTCUSDT/ETHUSDT/ETHBTC)：<input type="text" name="market">
+			订单ID(order_id)：<input type="text" name="order_id">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+        <p>PC-WZ-09.货币简介</p>
+		<form action="/api/register/coin-text" method="post">
+			货币简称(coin_symbol)：<input type="text" name="coin_symbol" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-10.公告</p>
+		<form action="/api/user/message-list" method="post">
+			type(0.公告 1.个人消息)：<input name="type" type="text" value="0"/>
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			请求开始数(limit_begin)：<input name="limit_begin" type="text" value="0"/>
+			请求结束数(limit_num)：<input name="limit_num" type="text" value="20"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-11.首页轮播图</p>
+		<form action="/api/start/start-page" method="post">
+            （type=1:轮播图，2:logo）：<input type="text" value="" name="type">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-WZ-12.PC端内容管理</p>
+		<form action="/api/start/cate" method="post">
+			分类ID(6是首页-最新资讯,7是百科,9是公告-最新动态)：<input type="text" name="id" value=""/>
+			请求开始数(limit_begin)：<input name="limit_begin" type="text" value="0"/>
+			请求结束数(limit_num)：<input name="limit_num" type="text" value="20"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-13.用户提现申请【原接口名称：用户提现（从用户银行地址转出到指定地址）】</p>
+		<form action="/api/withdraw/turn-out" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			货币标识（BTC等）: <input name="coin_symbol" type="text" value=""/>
+			用户钱包地址：<input type="text" name="wallet_addr">
+			转出金额（十进制）: <input name="value" type="text" value=""/>
+			矿工费： <input name="current" type="text" value=""/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-14.银行交易明细【充值、转出】</p>
+		<form action="/api/withdraw/recharge-details" method="post">
+			access_token：<input name="access_token" type="text" value="VXaUsIQC-MAMRSv_-6dwGnx_RaH3iacE_1534906709" size="60"/>
+			获取第N页(从1开始)：<input type="text" name="page">
+			每页数据量：<input type="text" name="page_size">
+			币种类型(可为空)：<input type="text" name="coin_symbol">
+			交易类型(可为空)：<select name="transaction_type">
+				<option value=""></option>
+				<option value="1">充值【该类型为1】</option>
+				<option value="10">转出【该类型为10】</option>
+			</select>
+			开始时间(可为空)：<input type="text" name="begin_time">
+			结束时间(可为空)：<input type="text" name="end_time">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-15.获取币种列表【pc、app公用】</p>
+		<form action="/api/withdraw/coin-list" method="post">
+			access_token：<input name="access_token" type="text" value="zcaF3GYVNLQu-vCcVZZvmTeni9kYw7YY_1535594561" size="60"/>
+			获取第N页(从0开始)：<input type="text" name="page">
+			每页数据量：<input type="text" name="page_size">
+			设备类型(公共参数OS) <input type="text" name="os" value="android">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-16.生成货币地址</p>
+		<form action="/api/withdraw/generate-address" method="post">
+			access_token：<input name="access_token" type="text" value="zcaF3GYVNLQu-vCcVZZvmTeni9kYw7YY_1535594561" size="60"/>
+			币种类型：<input type="text" name="coin_symbol">
+			chain_network：<input type="text" name="chain_network">
+			<input type="submit" value="提交"/>
+		</form><br/>
+
+		<p>PC-CC-20.获取OTC聊天初始化信息</p>
+		<form action="/api/chat/init-pc" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-21.用户申请提现记录【状态1：待审核、2：审核通过、3：未通过、4：提现失败】</p>
+		<form action="/api/withdraw/apply-log" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			获取数据页码：<input type="number" name="page">
+			每页数据量：<input type="number" name="page_size">
+			币种类型：<input type="text" name="coin_symbol">
+			开始时间(可为空)：<input type="text" name="begin_time">
+			结束时间(可为空)：<input type="text" name="end_time">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>PC-LH-22.撤销申请提现</p>
+		<form action="/api/withdraw/revoke-apply" method="post">
+			access_token：<input name="access_token" type="text" value="" size="60"/>
+			撤销申请记录单的id：<input type="number" name="apply_id">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+		<h4>PC端 End</h4>
+	</div>
+	<div style="background-color: #8BBF65;">
+		<h4>OTC交易</h4>
+		<p>OTC-KK-01.获取OTC支持货币列表</p>
+		<form action="/api/otc/coin-list" method="post">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-02.获取OTC账户余额</p>
+		<form action="/api/otc/balance" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			资产类型(asset_type)：<input type="text" placeholder="BTC|ETH|USDT" name="asset_type"><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-03.获取市场列表</p>
+		<form action="/api/otc/market-list" method="post">
+			side(1:卖家 2:买家)：<input name="side" type="text" value="1" size="10"/><br>
+			货币名称(coin_name)：<input type="text" placeholder="BTC" name="coin_name"><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+		
+		<p>OTC-KK-04.发布OTC订单</p>
+		<form action="/api/otc/publish-info" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			side(1:卖 2:买)：<input name="side" type="text" value="1" size="10"/><br>			
+			货币名称(coin_name)：<input type="text" value="BTC" name="coin_name"><br>
+			限额_最低(min_num)：<input type="text" value="0.01" name="min_num"><br>
+			限额_最高(max_num)：<input type="text" value="5.00" name="max_num"><br>
+			单价(price_usd)：<input type="text" value="1082.00" name="price_usd"><br>
+			支付宝(alipay_enable)：<input type="text" value="1" name="alipay_enable"><br>
+			微信(wechat_enable)：<input type="text" value="1" name="wechat_enable"><br>
+			银行卡(card_enable)：<input type="text" value="1" name="card_enable"><br>
+			备注(note)：<input type="text" value="this is test" name="note"><br>			
+			<input type="submit" value="提交"/>
+		</form><br/><br/>	
+		
+		<p>OTC-KK-05.OTC下单</p>
+		<form action="https://www.too86.com/api/otc/order" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			side(1:卖 2:买)：<input name="side" type="text" value="1" size="10"/><br>
+			市场ID：<input name="market_id" type="text" value="6" size="10"/><br>					
+			数量(amount)：<input type="text" value="1.5" name="amount"><br>					
+			货币名称(coin_name)：<input type="text" value="BTC" name="coin_name"><br>
+			对方UID：<input name="uid2" type="text" value="1000008" size="10"/><br>				
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+		
+		<p>OTC-KK-06.OTC确认支付</p>
+		<form action="/api/otc/pay" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			订单ID：<input name="order_id" type="text" value="6" size="10"/><br>					
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+		
+		<p>OTC-KK-07.OTC确认成交放币</p>
+		<form action="/api/otc/deal" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			订单ID：<input name="order_id" type="text" value="6" size="10"/><br>					
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-08.OTC订单详情</p>
+		<form action="/api/otc/order-info" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			订单ID：<input name="order_id" type="text" value="6" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-09.OTC历史订单【0：已取消，1：已完成，2未付款，3已付款待确认，11申诉中，12申诉已处理】</p>
+		<form action="/api/otc/order-history" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/>
+			订单类型：
+			<select name="type" id="">
+				<option value="0">0：已取消</option>
+				<option value="1">1：已完成</option>
+				<option value="2">2：未付款</option>
+				<option value="3">3：已付款待确认</option>
+				<option value="11">11：申诉中</option>
+				<option value="12">12：申诉已处理</option>
+			</select>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-10.OTC买家取消订单</p>
+		<form action="/api/otc/cancel-order" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			订单ID：<input name="order_id" type="text" value="6" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-11.我的发布</p>
+		<form action="/api/otc/my-market" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-12.撤销发布</p>
+		<form action="/api/otc/disable-market" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			市场ID：<input name="market_id" type="text" value="6" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-13.删除发布【已经撤销的才能进行删除操作】</p>
+		<form action="/api/otc/del-market" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			市场ID：<input name="market_id" type="text" value="6" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-14.启用发布</p>
+		<form action="/api/otc/enable-market" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			市场ID：<input name="market_id" type="text" value="6" size="10"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-15.申诉</p>
+		<form action="/api/otc/appeal" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			订单ID：<input name="order_id" type="text" size="20"/><br>
+			原因：<input name="describe" type="text" size="20"/><br>
+			截图：<input name="image" type="text" size="20"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>OTC-KK-16.上传图片</p>
+		<form action="/api/otc/image" method="post" enctype="multipart/form-data">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			申诉图片: <input name="image" type="file"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>POTC-KK-17.获取申诉信息</p>
+		<form action="/api/otc/appeal-info" method="post">
+			access_token：<input name="access_token" type="text" value="TxpUMccv-7oYfMyfpce0SCxBxLYqWdxJ_1533713782" size="60"/><br>
+			申诉ID：<input name="id" type="text" size="20"/><br>
+			请求开始数(limit_begin)：<input name="limit_begin" type="text" value="0"/><br>
+			请求数量(limit_num)：<input name="limit_num" type="text" value="20"/><br>
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>WZ-26-01.机器人</p>
+		<form action="/api/robot/robot-list" method="post">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<p>WZ-26-01.二维码</p>
+		<form action="/api/register/qrcode" method="post">
+			<input type="submit" value="提交"/>
+		</form><br/><br/>
+
+		<h5 style="text-align: center">************************************ OTC模块结束 ************************************</h5>
+
+		<h4>OTC End</h4>
+	</div>

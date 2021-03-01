@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API测试页面</title>
+</head>
+<body>
+
+		<p>出金测试</p>
+		<form action="/api/thirdrecharge/charge" method="post">
+           		order_no: <input name="order_no" type="text" value="L123456789088"/>
+			source_usdt_addr：<input type="text" name="source_usdt_addr" value="0xcbb1bd13f1b9254f8a84774a8a5b754f3acd6aac"/>
+			target_usdt_addr: <input name="target_usdt_addr" type="text" value="0xc253815b910f223bae27e63b9763f667e0d8dcbf"/>
+			currency_type: <input name="currency_type" type="text" value="UDT"/>
+			amount: <input name="amount" type="text" value="0.5"/>
+			sign: <input name="sign" type="text" value="7ef398225108e722443414298fe1f16a"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+
+		<p>回调测试</p>
+		<form action="https://www.happy150.com/api/send_notify_callback" method="post">
+           		order_no: <input name="order_no" type="text" value="L1234567890"/>
+			tran_no：<input type="text" name="tran_no" value="1299aef77ba11az"/>
+			amount: <input name="amount" type="text" value="98.00"/>
+			status: <input name="status" type="text" value="1"/>
+			msg: <input name="msg" type="text" value="success"/>
+			sign: <input name="sign" type="text" value="539990d3fc16df95c70c83347379c0b8"/>
+			<input type="submit" value="提交"/>
+		</form><br/>
+
+		<p>入金回调测试</p>
+		<form action="https://www.happy150.com/api/recv_notify" method="post">
+			amount: <input name="amount" type="text" value="0.01"/>
+			currency_type: <input name="currency_type" type="text" value="ETH"/>
+			remark: <input name="remark" type="text" value="0x9745a237b8d85ca8f624a75e260d9c53bb635d3a288636570ef59c79b6a90a1b"/>
+			send_at: <input name="send_at" type="text" value="1573891579"/>
+			source_usdt_addr：<input type="text" name="source_usdt_addr" value="0x7abc65cab45f2f700e1b254dee29a7089676a3e1"/>
+			target_usdt_addr: <input name="target_usdt_addr" type="text" value="0xe34940090b54cc43346b90a0715b0bd7444f602d"/>
+           	tran_no: <input name="tran_no" type="text" value="1"/>
+			sign: <input name="sign" type="text" value="a3a27a171064cd6089c8da1ea6593bc1"/>
+			<input type="submit" value="提交"/>
+		</form><br/>

@@ -1,0 +1,115 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+    margin: 0;
+    padding: 0
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,iframe,img {
+    border: 0
+}
+
+.other_header {
+    height: 60px;
+    position: relative
+}
+
+.frame {
+    width: 960px;
+    margin: 0 auto;
+    position: relative
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+    outline: 0
+}
+
+a:hover {
+    color: #666;
+    -webkit-transition: color .3s linear 0s;
+    -moz-transition: color .3s linear 0s;
+    -ms-transition: color .3s linear 0s
+}
+address,caption,cite,code,dfn,em,strong,th,var,i,b {
+    font-style: normal;
+    font-weight: 400
+}
+
+ol,ul {
+    list-style: none
+}
+
+caption,th {
+    text-align: left
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    color: #000;
+    font-weight: 400;
+    color: #666
+}
+body,button,input,select,textarea {
+    font-family: Microsoft YaHei,\5b8b\4f53,Arial,Verdana;
+    font-size: 12px
+}
+
+article,aside,dialog,footer,header,section,footer,nav,figure,menu {
+    display: block
+}
+
+
+body {
+    background: #F3F3F3
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background: url(../../backend/img/bg_qianbao.png) no-repeat;
+}
+.main{
+    width: 1000px;
+    height: 700px;
+    position: relative;
+    margin: 0 auto;
+}
+.content{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+}
+.topImg{
+    width: 500px;
+    margin-left: 6px;
+}
+.qrcode{
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    margin: 30px 0 ;
+}
+.apkBtnBox li{
+    display: inline-block;
+}
+#androidBtn a{
+    display: inline-block;
+    width: 216px;
+    height: 76px;
+    background-image: url(../../backend/img/android_qianbao.png);
+    margin:0 20px 0 10px;
+}
+#iosBtn a{
+    display: inline-block;
+    width: 216px;
+    height: 76px;
+    margin:0 0 0 34px;
+    background-image: url(../../backend/img/ios_qianbao.png)
+}

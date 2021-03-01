@@ -1,0 +1,211 @@
+body::-webkit-scrollbar-track {
+    width: 0;
+}
+
+body {
+    min-width: 1350px;
+}
+.newFt{
+    background-color:#18195b;
+    height: 430px;
+}
+.newBoxB{
+    border:1px solid #f9f8ff;
+    border-radius:5px;
+}
+.flexslider{
+    position: relative;
+    background: #F5F9FE;
+}
+.foot_a{
+    display: block;
+    color:#d9d9db;font-size:12px;
+    letter-spacing: 2px;
+    margin-bottom:10px;
+}
+.foot_p{
+    font-size:14px;
+    color:#fff;
+    line-height:40px;
+    margin-bottom:10px;
+}
+.foot_b_p{
+    text-align:center;
+    font-size:14px;
+    line-height:40px;
+    letter-spacing:2px;
+    color:#fff;
+}
+.foot_b_p2{
+    text-align:center;
+    font-size:14px;
+    line-height:40px;
+    letter-spacing:2px;
+    color:#fff;
+    padding-bottom:20px;
+}
+
+
+.navLift li .msgView .msglist {
+    display: block !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    margin: 0 !important;
+    float: inherit !important;
+    width: 100%;
+}
+
+.navLift li .msgView .msglist a {
+    max-width: 208px;
+    font-size: 12px;
+    color: #555 !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    line-height: 16px;
+    height: 16px !important;
+    padding-top: 6px;
+}
+
+.mes {
+    padding: 70px 0;
+    width: 100%;
+}
+
+.tb {
+    width: 1140px;
+    margin: auto;
+}
+
+.tbT {
+    border: 1px solid #dce1f2;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 8px;
+}
+
+.tbT div {
+    width: 160px;
+    color: #1f34d5;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 8px;
+}
+
+.tbT .tbTClick {
+    background-color: #1f34d5;
+    color: #fff;
+}
+
+.tbMain {
+    width: 1140px;
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid #dce1f2;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.tbMainT>div {
+    width: 190px;
+    text-align: center;
+    line-height: 40px;
+    color: #3d3dce;
+    font-weight: bold;
+}
+
+.vi {
+    background-color: #dce1f2;
+}
+
+.vi>div {
+    font-size: 14px;
+    width: 190px;
+    text-align: center;
+    line-height: 40px;
+    color: #3d3dce;
+    font-weight: bold;
+}
+
+.listBox>div {
+    width: 190px;
+    text-align: center;
+    line-height: 40px;
+    color: #3d3dce;
+    font-weight: bold;
+}
+
+.allList {
+    width: 1140px;
+    margin: auto;
+    border: 1px solid #dce1f2;
+    border-top: 0;
+}
+
+.listBox {
+    border-top: 1px solid #dce1f2;
+}
+
+.allList .listBox:first-child {
+    border-top: 0;
+}
+
+.listBox span {
+    color: #999;
+}
+
+.headertop {
+    min-width: 1400px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgba(192,222,255,.5);
+}
+
+.nav li a {
+    line-height: 60px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+    margin: 0 5px;
+    color: #000;
+}
+
+.nav li a:hover {
+    line-height: 60px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+    margin: 0 5px;
+    color: #545de2;
+    border-bottom: 2px solid #2c5ad7;
+}
+
+.nav li a.active {
+    line-height: 60px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.loginArea a, .person a {
+    color: #000;
+}
+
+.headerUser .person .navLift li a.active {
+    color: #545de2;
+    border-bottom: 2px solid #2c5ad7;
+}
+
+.headerUser .person .navLift li a {
+    color: #000;
+}
+
+.headerUser .person .navLift li a:hover {
+    color: #545de2;
+    border-bottom: 2px solid #1b4bfa;
+} 
+.loginArea {
+    min-width: 390px;
+}

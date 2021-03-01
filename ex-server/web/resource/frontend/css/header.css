@@ -1,0 +1,259 @@
+	.OpenBeta {
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				font-size: 14px;
+				color: #F8E81C;
+				margin-top: 12px;
+			}
+			
+			.OpenBeta.active {
+				background: #FDE1DF;
+				position: relative;
+				color: #DA2E22;
+				font-weight: bold;
+				z-index: 99;
+			}
+			
+			.nav li:nth-child(1) {
+				margin-left: 32px;
+			}
+			
+			.header-nav::-webkit-scrollbar {
+				width: 6px;
+				height: 16px;
+			}
+			
+			.sub-nav::-webkit-scrollbar {
+				width: 6px;
+				height: 16px;
+			}
+			
+			.header-nav::-webkit-scrollbar-thumb {
+				width: 10px;
+				height: 20px;
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: #afd0f5;
+				/*rgba(151,168,190,.3);*/
+			}
+			
+			.sub-nav::-webkit-scrollbar-thumb {
+				width: 10px;
+				height: 20px;
+				border-radius: 10px;
+				-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+				background-color: #afd0f5;
+				/*background-color: rgba(151,168,190,.3);*/
+			}
+			
+			.header-nav .sub-nav {
+				width: 486px;
+				max-width: 486px;
+				max-height: 193px;
+				min-height: 140px;
+				display: inline-block;
+				padding-bottom: 10px;
+				overflow-y: visible;
+				overflow-x: hidden;
+			}
+			
+			.header-nav .sub-nav li {
+				height: 21px;
+			}
+			
+			.header-nav .sub-nav li:hover {
+				border-radius: 0;
+			}
+			
+			.header-nav .sub-nav .ht_icon {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				vertical-align: top;
+			}
+			
+			.header-nav .sub-nav a {
+				height: 21px;
+				font-size: 12px;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				margin-left: 4px;
+				display: inline-block;
+			}
+			
+			.multlang_cont {
+				width: 150px;
+				position: absolute;
+				top: 40px;
+				right: 0px;
+				padding-top: 18px;
+				display: none;
+			}
+			
+			.multlang_cont ul {
+				background: #fff;
+				border-radius: 6px;
+				box-shadow: 0 5px 24px 0 rgba(117, 175, 238, 0.50);
+				box-sizing: border-box;
+				position: relative;
+				display: inline-block;
+			}
+			
+			.headerUser .person .multlang_cont ul li,
+			.headertop .multlang_cont ul li {
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 0px;
+    font-size: 14px;
+    color: #333333;
+    padding-left: 27px;
+    box-sizing: border-box;
+    text-align: left;
+			}
+			
+			.headerUser .person .multlang_cont ul li.active {
+				background: #D3E6FB;
+				border-radius: 6px;
+				color: #368AE5;
+			}
+			
+			.headerUser .person .multlang_cont ul li img,
+			.headertop .multlang_cont ul li img {
+				width: 24px;
+				height: 16px;
+				margin-right: 17px;
+				position: relative;
+				top: 3px;
+			}
+			
+			.multlang_cont ul li:hover {
+				background: #D3E6FB;
+				border-radius: 6px;
+				color: #368AE5;
+			}
+			
+			.headerUser .person .navLift {
+				width: 400px;
+			}
+			
+			.top_body .headerUser .person .navLift {
+				width: 420px;
+				/*width: 325px;*/
+			}
+			
+			.top_body .headerUser .person .information .user_mine {
+				width: 100px;
+			}
+			
+			.loginArea {
+				width: 310px;
+				/*width: 210px;*/
+			}
+			
+			.top_body .loginArea {
+				width: 370px;
+				/*width: 235px;*/
+			}
+			
+			.loginArea .regMult img {
+				width: 24px;
+				height: 16px;
+				margin-bottom: -3px;
+			}
+			
+			.loginArea .regMult:hover {
+				background: none;
+			}
+			
+			.loginArea {
+				overflow: initial;
+			}
+			
+			.multlang_regcont {
+				top: 25px;
+				text-align: center;
+			}
+			
+			.multlang_regcont ul {
+				width: 100%;
+				background: #fff;
+				border-radius: 3px;
+				box-sizing: border-box;
+				position: relative;
+				display: inline-block;
+			}
+			
+			.multlang_regcont ul li {
+				width: 100px;
+				position: relative;
+				cursor: pointer;
+				text-align: center;
+				margin-left: 0px;
+				line-height: 40px;
+			}
+			
+			.multlang_cont ul li:hover {
+				color: blue;
+			}
+			
+			.headerUser .person .navLift li a.multlang img,
+			.headertop .multlang_cont li a.multlang img {
+				width: 24px;
+				height: 16px;
+				position: relative;
+				top: 3px;
+			}
+			
+			.h_regist {
+				margin-right: 10px;
+			}
+
+	.clearfix{
+		zoom: 1;
+		
+	}
+	.clearfix:after{
+		content: '';
+		clear: both;
+		visibility: hidden;
+		height: 0;
+		display: block;
+	}
+	
+		li.en_none:hover .myMsgView{
+				display: block;
+			}
+			li.en_none:hover .msgView{
+				display: block;
+			}
+			.headerUser .person  li.asset_header:hover .myuserView{
+				display: block;
+			}
+			.headerUser .person  li.asset_header:hover .myUser{
+				display: block;
+			}
+			.multlang_cont {
+				display: block;
+				height: 0;
+				width: 0;
+				overflow: hidden;
+				transition: 0.1s;
+			}
+			
+			.langhover:hover .multlang_cont {
+				height: 100px;
+				width: 150px;
+				transition: 0.5s;
+			}
+			.regMult:hover .multlang_regcont{
+				 height: 100px;
+   				 width: 150px;
+   				transition:all .5;
+			}

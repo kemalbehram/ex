@@ -1,0 +1,618 @@
+#oImg img{
+	width:172px;height:180px;margin-top: 40px;width:auto;margin-left:calc(50% - 86px);
+}
+#oImg p{
+	width:100%; height:30px;text-align: center;line-height: 30px;font-size: 16px;margin-top: 30px;color:#888888;margin-bottom: 30px;
+}
+.sdmenu div a {
+	text-align: left;
+	padding-left: 40px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.top_body .menu17 {
+	display: none;
+}
+
+.top_body .menu18 {
+	display: none;
+}
+.sc_statu li{
+    width:250px;
+}
+
+.passContent .tagContent .ybc_con li label{
+    padding-left: 10px;
+    font-size: 14px;
+	color: #333333;
+}
+.passContent .tagContent .ybc_con li label {
+    width: 150px;
+}
+.careful_tip {
+    margin-left: 170px;
+    margin-top: -20px;
+    color: #e62512;
+}
+.sdmenu div a {
+    text-align: left;
+    padding-left: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#main{ min-height:689px;}
+.allRead{
+	float: right;
+	padding: 5px 15px;
+	border-radius: 6px;
+	cursor:pointer;
+	color: #555;
+	margin: 10px 3px 0 0;
+	border: 1px solid #368AE5;
+}
+.allRead:hover{
+	background: #368AE5;
+	color: #FFF;
+}
+
+.messagetab a {
+    display: block;
+    float: left;
+    width: 300px;
+    text-align: left;
+    line-height: 50px;
+    padding-left: 0px;
+    color: #666;
+}
+.jumpbtn>button {
+    margin: 0 3px;
+}
+.jumpchoice {
+    width: 235px;
+}
+.ybc_list .ul_select {
+	height: 40px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+}
+.ybc_list .ul_select .li_select {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 40px;
+
+}
+.ybc_list select {
+	width: 122px;
+    height: 38px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+
+}
+.ybc_list select option {
+	height: 28px;
+	/*color: #333;*/
+}
+.ybc_list .ul_select label {
+	color: #999;
+	font-size: 14px;
+}
+.ybc_list select{height:35px;}
+.ybc_list .ul_select .li_select{margin-right: 46px;}
+
+#mySelect_1,#mySelect_2,#mySelect_3 {
+	width: 170px;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.filter-list li a {
+	text-decoration: none;
+}
+.navLift li .msgView .msglist a {
+     padding-top: 0px;
+}
+
+select { text-align-last:center;}
+
+.inputVcode {
+	width: 150px;
+    height: 42px;
+    padding-left: 10px;
+    background: #fff;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    margin: 0 10px 0 0;
+}
+.getVcode {
+	width: 120px;
+    height: 42px;
+    background: #368ae5;
+    border-radius: 6px;
+    border: 0;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    vertical-align: top;
+}
+.installsteps>li>i.vcodetip {
+    font-size: 14px;
+    color: #e62512;
+    margin-top: 5px;
+    padding-bottom: 0;
+    font-style: normal;
+}
+
+.ws_idCardZ{
+	width:30%;
+	height:180px;
+    position: relative;
+    top: 40px;
+    left: 10%;
+}
+.ws_idCardF{
+	width:30%;
+	height:180px;
+	position: absolute;
+    top: 272px;
+    right: 20%;
+}
+.nopass{
+	width:100%;height:36px;margin-left:40%;text-indent:2.5em;line-height:36px;font-size:24px;position:absolute;top:33%;
+}
+/*withdraw*/
+.layui-layer-dialog.activeType .layui-layer-title{
+    border: 0;
+    background: #F5F9FE;
+    padding: 0;
+    text-align: center;
+    height: 65px;
+    line-height: 65px;
+    font-size: 18px;
+    color: #333333;
+}
+.layui-layer-dialog.activeType{
+	min-width: 448px!important;
+	background: #F5F9FE;
+	border-radius: 6px;
+}
+.layui-layer-dialog.activeType .layui-layer-content{
+	padding-top: 0;
+	padding: 0;
+}
+.layui-layer-dialog.activeType .layui-layer-content #walletBinding{
+	width: 415px;
+	margin: 0 auto;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.layui-layer-dialog.activeType .layui-layer-content #walletBinding p{
+	width: 100%;
+	min-height: 42px;
+	line-height: 42px;
+	margin-bottom: 20px;
+}
+.layui-layer-dialog.activeType .layui-layer-content #walletBinding p span{
+	margin-right: 10px;
+	width: 98px;
+	display: inline-block;
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+}
+.layui-layer-dialog.activeType .layui-layer-content #walletBinding p input{
+	width: 300px;
+    height: 42px;
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    line-height: 42px;
+}
+.layui-layer-dialog.activeType .layui-layer-content #walletBinding .hint{
+	width: 100%;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    color: red;
+    padding: 0;
+    display: none;
+    font-style: normal;
+    margin-top: 10px;
+}
+.layui-layer-dialog.activeType .layui-layer-btn{
+	/* padding-right: 27px; */
+	padding-bottom: 30px;
+	text-align: center;
+}
+.layui-layer-dialog.activeType .layui-layer-btn .layui-layer-btn0{
+    width: 300px;
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 42px;
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+.layui-layer-dialog.activeType .layui-layer-setwin .layui-layer-ico{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(//static.digifinex.com/Home/images/index/log_in_close.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    top: -50px;
+    right: -50px;
+}
+.layui-layer-msg .layui-layer-content{
+	background-color: rgba(0,0,0,.6);
+    padding: 12px 5px;
+    border-radius: 6px;
+}
+.layui-layer-dialog.active .layui-layer-content{
+	    width: 145px;
+		margin: 0 auto;
+		background-color: rgba(0,0,0,.7);
+}
+.layui-layer-dialog.active {
+	background: rgba(255,255,255,0)
+}
+.layui-layer-dialog .layui-layer-content #walletBinding .tagber{
+    width: 300px;
+    display: inline-block;
+    line-height: 19px;
+    padding: 0;
+    font-style: normal;
+    padding-left: 95px;
+    font-size: 12px;
+    color: #E62512;
+    margin-top: 10px;
+}
+.noSet{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10007;
+}
+.noSet span{
+    width: 432px;
+    height: 67px;
+    background: #ffb500;
+    border-radius: 6px;
+    display: inline-block;
+    line-height: 67px;
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+}
+.noSet span a{
+	color: #368AE5;
+    text-decoration: underline;
+}
+.raise .message{
+	width: 100%;
+    height: 40px;
+    margin-bottom: 16px;
+    line-height: 40px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #E62512;
+}
+.currentForm .surplus_amount {
+	font-size: 14px;
+	color: #999;
+	margin-left: 142px;
+	margin-top: -25px;
+}
+
+.top_body .currentForm label {
+    width: 170px;
+}
+.top_body .currentForm .surplus_amount {
+    margin-left: 210px;
+}
+.top_body .noSet span {
+	width: 560px;
+}
+.top_body .layui-layer-dialog.activeType .layui-layer-content #walletBinding p span {
+	width: 103px;
+}
+.top_body .jumpchoice {
+    width: 205px;
+    float: left;
+}
+.top_body .jumpbtn>button {
+    margin: 0px 5px;
+}
+.top_body .bindAddr {
+    width: 150px;
+}
+.allpage {
+width: 100%;
+text-align: center;
+margin-top: 50px;
+padding-bottom: 15px;
+}
+.pagecnt {
+    float: left;
+    font-size: 14px;
+    color: #555;
+    width: 42%;
+    text-align: right;
+}
+.address {
+    padding: 34px 0 35px 25px;
+    font-size: 18px;
+    color: #368ae5;
+}
+.coinNet {
+text-align: center;
+font-size: 14px;
+}
+.coinNet a {
+text-decoration: none;
+display: inline-block;
+height: 20px;
+width: 50px;
+vertical-align: middle;
+background-color: #368ae5;
+color: #fff;
+border-radius: 2px;
+margin: 0 5px;
+}
+.coinNet a:hover {
+background-color: rgba(54,138,229,.6);
+}
+.qrImage {
+height: 100px;
+width: 100px;
+margin: 25px auto 0;
+margin-left:-50px;
+}
+.changetop {
+padding: 0 0 50px 30px;
+margin-bottom: 15px;
+ }
+.addQrcode {
+width: 120px;
+height: 145px;
+position: relative;
+margin: 20px 0 0 270px;
+ }
+ .userinbtc .outwallet .addrUrl{
+width: 100%;
+left: 0;
+word-break: break-all;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+line-height: initial;
+padding: 0 10px;
+box-sizing: border-box;
+}
+.dianji{
+color: #fff;
+font-size: 16px;
+background-color: #ffb033;
+text-align: center;
+width: 540px;
+height: 58px;
+line-height: 58px;
+border-radius: 6px;
+display: inline-block;
+cursor: pointer;
+position: relative;
+}
+
+.memo {
+
+font-size: 14px;
+color: #555;
+line-height: 19px;
+}  
+
+.time{
+margin:0 0 20px 30px;width: 64%;display: inline-block;	
+}
+
+/*邀请好友*/
+.link-target {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 14px -1px rgba(0,0,0,.1);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.link-target ul li {
+    margin-bottom: 20px;
+    text-align: center;
+    height: 45px;
+}
+.link-target .link, .link-target .code {
+    width: 534px;
+    height: 21px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 14px;
+    color: #2861f6;
+    background: #e6f1fc;
+    border-radius: 6px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    font-family: PingFangSC-Regular,sans-serif,-apple-system,HelveticaNeue,Arial,microsoft yahei!important;
+}
+.link-target .link-btn, .link-target .code-btn {
+    width: 160px;
+    padding: 12px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.wl-btn {
+    background-image: linear-gradient(-143deg,#4888F2 0%,#2861F6 100%);
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 30px;
+}
+.total-reward {
+    background: #fff;
+    box-shadow: 0 4px 14px -1px rgba(0,0,0,.1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+}
+.total-reward .rewards li {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #414655;
+    text-align: center;
+    font-weight: 600;
+}
+.rewards-value {
+    font-size: 18px;
+    color: #e65f46;
+    margin-left: 10px;
+}
+.rewards-detail {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 30px;
+}
+.rewards-detail li {
+    width: 33.3%;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.rewards-detail em {
+    width: 1px;
+    height: 30px;
+    background: #ddd;
+    display: inline-block;
+    margin-top: 10px;
+}
+.rewards-detail li p:first-child {
+    color: #e65f46;
+}
+.rewards-detail li p {
+    display: block;
+    text-align: center;
+    margin-bottom: 9px;
+    font-size: 14px;
+    color:#353535;
+}
+.tip-div {
+    display: inline-block;
+    position: relative;
+}
+.tip-icon {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    line-height: 13px;
+    border-radius: 100%;
+    border: 1px solid #e62512;
+    color: #e62512;
+    font-size: 12px;
+    cursor: pointer;
+    font-style: normal;
+}
+.tip-icon a{
+    color: #e62512;
+}
+.tips {
+    background: #2861f6;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    top: 21px;
+    left: -68px;
+    width: 150px;
+}
+.referer-lead {
+    margin-top: 20px;
+    padding: 40px 80px;
+    background: #fff;
+    box-shadow: 0 4px 14px -1px rgba(0,0,0,.1);
+    font-size: 14px;
+    color:#353535;
+}
+.referer-lead h3 {
+    font-size: 18px;
+    color: #414655;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.referer-lead table tbody tr td {
+    text-align: center;
+}
+.referer-lead table tbody tr:nth-child(1) td:nth-child(1) {
+    background: url(../img/tag_bga@2x.png) no-repeat;
+    background-size: 29%;
+    background-position: 62px 5px;
+    color: #fff;
+}
+.referer-lead table tbody tr:nth-child(2) td:nth-child(1) {
+    background: url(../img/tag_bgb@2x.png) no-repeat;
+    background-size: 29%;
+    background-position: 62px 5px;
+    color: #fff;
+}
+.referer-lead table tbody tr:nth-child(3) td:nth-child(1) {
+    background: url(../img/tag_bgc@2x.png) no-repeat;
+    background-size: 29%;
+    background-position: 62px 5px;
+    color: #fff;
+}
+.friend-upload {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.coin_symbol{
+     color: #e65f46;
+     font-size: 16px;
+}
+.api-explain {
+    color: #414655;
+    margin-bottom: 50px;
+    padding: 1px 0 20px 30px;
+    line-height: 25px;
+    font-size: 14px;    
+}
+.api-explain a {
+    color: #2861F6;
+}
+.api_label{
+    width: 100px;
+    display: inline-block;
+    color: #0e0e0e;
+}

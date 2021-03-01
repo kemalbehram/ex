@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>邀请好友</title>
+    <style>
+        html{font-size: 100px;}
+        *{margin:0;padding:0;font-family: pingFang-SC-Regular;list-style: none;}
+        #box{
+            width:100%;
+            height:100%;
+            background-size: cover;
+            position: relative;
+            overflow-y: scroll;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#046afd), to(#9500a7));
+            background-image: linear-gradient(top, #046afd, #9500a7);
+            -webkit-box-sizing: border-box;
+        }
+        .content{width:100%;margin-top: 0;}
+        .share{    
+            font-size: 14px;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+        }
+        .Qure{width:3rem;height:3rem;margin-left: calc(50% - 1.5rem);margin-top:40%;;}
+        ul{width:80%;margin-left:10%;position: relative;margin-top:0.4rem;margin-bottom: 1rem;}
+        ul li{width: 48%;height: 0.64rem;float: left;}
+        .clear{ clear:both} 
+        ul li img{width:2.44rem;height:0.64rem;position: absolute;top:0;left:0.2rem;}
+        ul li span{position: absolute;font-size:0.3rem;color:#ffffff;text-align: center;line-height: 0.64rem;height: 0.64rem;width: 2.44rem;text-indent: 1em;}
+    </style>
+    <script>
+        var os = 'ios';
+        var language = '';
+        var access_token = '';
+        var url = "";
+        var pingtai = "JingLanEx";
+        (function (doc, win) {
+            var docEl = doc.documentElement
+            var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+            var recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if (clientWidth >= 750) {
+                    docEl.style.fontSize = '100px';
+                } else {
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+
+                h = document.documentElement.clientHeight+'px';
+                var oBox = document.getElementById('box');
+                oBox.style.height = h;
+
+                function GetRequest() { 
+                    var url = location.search; //获取url中"?"符后的字串 
+                    var theRequest = new Object(); 
+                    if (url.indexOf("?") != -1) {
+                        var str = url.substr(1); 
+                        strs = str.split("&"); 
+                        for(var i = 0; i < strs.length; i ++) {
+                            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]); 
+                        } 
+                    } 
+                    return theRequest; 
+                } 
+                var req = GetRequest();
+                language = req['language'];
+                access_token = req['access_token'];
+                var languageZ = document.querySelector('.language-zh')
+                var languageE = document.querySelector('.language-en')
+                var code = document.querySelectorAll('.code');
+                var Qure = document.querySelectorAll('.Qure');
+                
+                if(language == 'en_us'){
+                    languageZ.style.display = 'none';
+                    languageE.style.display = 'block';
+                }else{
+                    languageZ.style.display = 'block';
+                    languageE.style.display = 'none';
+                } 
+
+                var xhr = new XMLHttpRequest();
+                xhr.open('post', '/api/register/recommend' );
+                xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xhr.send('access_token='+access_token+'&os='+os+'');
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var result = xhr.responseText;
+                        var jsonObject=eval("("+result+")");
+                        var data = jsonObject.data;
+                        url = data.url;
+                        if(language == 'en_us'){
+                            code[1].innerHTML = data.code;
+                            Qure[1].src = data.img;
+                        }else{
+                            code[0].innerHTML = data.code;
+                            Qure[0].src = data.img;
+                        }
+                    } 
+                };
+            };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);  
+        function copy(){
+            var input = document.createElement("input");
+            input.value = url;
+            document.body.appendChild(input);
+            input.select();
+            input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+            document.body.removeChild(input);
+            Toast('复制成功',2000);
+        };
+        function Toast(msg,duration){
+            duration=isNaN(duration)?3000:duration;
+            var m = document.createElement('div');
+            m.innerHTML = msg;
+            m.style.cssText="width: 60%;min-width: 150px;opacity: 0.7;height: 30px;color: rgb(255, 255, 255);line-height: 30px;text-align: center;border-radius: 5px;position: fixed;top: 40%;left: 20%;z-index: 999999;background: rgb(0, 0, 0);font-size: 12px;";
+            document.body.appendChild(m);
+            setTimeout(function() {
+                var d = 0.5;
+                m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+                m.style.opacity = '0';
+                setTimeout(function() { document.body.removeChild(m) }, d * 1000);
+            }, duration);
+        }
+        function jump() {
+            console.log(access_token);
+             var toUrl = "/wap/invite_friends?access_token=" + access_token+"&os="+os+"&language="+language;
+             document.getElementById('addr').href=toUrl;
+         }
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div class="content language-zh">
+            <img src="" class="Qure qure_class">
+            <p class="share">邀请码：<span class="code"></span></p>
+            <ul>
+                <li>
+                    <img src="image/bg_btn_yaoqingma.png" alt="">
+                    <span class="copy" onclick="copy()">
+                        复制链接
+                    </span>
+                </li>
+                <li>
+                    <img src="image/bg_btn_yaoqingma.png" alt="" style="left:56%;">
+                    <a href="javascript:;" onclick="jump()" id="addr"><span style="text-indent: 3em;" onclick="ForRecord('兑换记录')">我的推荐</span></a>
+                </li>
+                <div class="clear"></div> 
+            </ul>
+        </div>
+        <div class="content language-en">
+            <p class="share">code：<span class="code"></span></p>
+            <img src="" alt="" class="Qure">
+            <ul>
+                <li>
+                    <img src="image/bg_btn_yaoqingma.png" alt="">
+                    <span class="copy" onclick="copy()">
+                        <input type="text" value="" id="copy"style="position: absolute;opacity: 0;">
+                        Copyurl
+                    </span>
+                </li>
+                <li>
+                    <img src="image/bg_btn_yaoqingma.png" alt="" style="left:56%;">
+                    <a href="/wap/invite_friends"><span style="text-indent: 3em;">recommend</span></a>
+                </li>
+                <div class="clear"></div> 
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
